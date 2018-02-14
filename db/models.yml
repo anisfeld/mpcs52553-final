@@ -1,0 +1,16 @@
+Txt
+  tid: integer
+  bgtjobid: bigint
+  jobid: text
+  jobtext: text
+
+
+Description
+  flex_good_tf: integer
+  flex_good: text
+  flex_bad_tf: integer
+  flex_bad: text
+  work_from_home_tf: integer
+  work_from_home: text
+  benefits_string: text
+  txt_id: integer
