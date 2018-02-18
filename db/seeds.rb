@@ -12,9 +12,9 @@ require 'csv'
 # csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 Txt.delete_all
 
-file_path = Rails.root.join('lib', 'seeds', 'some_data_1.csv')
+file_path = Rails.root.join('lib', 'seeds', 'JobText_US_01-03-2016.csv')
 
-CSV.foreach(file_path, headers: true, encoding: 'ISO-8859-1') do |row| 
+CSV.foreach(file_path, headers: true, encoding: 'ISO-8859-1',  col_sep: "\t" ) do |row| 
 	Txt.create! row.to_hash
 end
 
