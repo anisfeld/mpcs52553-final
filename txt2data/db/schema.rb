@@ -58,11 +58,12 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "projects", force: :cascade do |t|
     t.text "title"
     t.text "description"
-    t.bigint "data_id"
+    t.integer "data_id", limit: 8
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text "owner_id"
     t.text "logo_url"
+    t.boolean "is_public", default: false
     t.index ["data_id"], name: "index_projects_on_data_id"
     t.index ["owner_id"], name: "index_projects_on_owner_id"
   end
@@ -88,9 +89,10 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "users", force: :cascade do |t|
     t.text "email"
     t.text "password"
-    t.text "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text "first_name"
+    t.text "last_name"
   end
 
 end
