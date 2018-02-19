@@ -1,0 +1,57 @@
+Project
+  title: text
+  description: text
+  data_id: bigint
+  logo_url: text
+  owner_id: text
+  is_public: boolean
+
+
+User
+  email: text
+  password: text
+  name: text
+
+Data
+  pid: bigint
+  data: text
+  field_1: text
+  field_2: text
+  field_3: text
+  field_4: text
+  field_5: text
+
+Test
+  project_id: integer
+  data_id: bigint
+
+Form
+  field_1: text
+  field_1_type: text
+  field_2: text
+  field_2_type: text
+  field_3: text
+  field_3_type: text
+  field_4: text
+  field_4_type: text
+  field_5: text
+  field_5_type: text
+  field_6: text
+  field_6_type: text
+
+Txt
+  tid: integer
+  bgtjobid: bigint
+  jobid: text
+  jobtext: text
+
+
+Description
+  flex_good_tf: integer
+  flex_good: text
+  flex_bad_tf: integer
+  flex_bad: text
+  work_from_home_tf: integer
+  work_from_home: text
+  benefits_string: text
+  txt_id: integer

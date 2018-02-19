@@ -1,0 +1,24 @@
+<div class="row">
+
+  <div class="col-sm-3 my-3">
+    <%= link_to "new project", "/projects/new" %>
+  </div>
+
+  <% Project.all.order('created_at desc').each do |project| %>
+
+    <div class="col-sm-3 my-3 text-center">
+      <% logo_url = (project.logo_url.present? ? project.logo_url : 'blank_poster.png') %>
+      <%= link_to image_tag(logo_url, :class => "img-fluid"), "/project/#{project.id}" %>
+      <p>
+        <%= project.title %>
+      </p> 
+
+      <p>
+        <%= link_to "[Delete]", "/projects/#{project.id}", method: "delete" %>
+        <%= link_to "[Edit]", "/projects/#{project.id}/edit" %>
+      </p>
+    </div>
+
+  <% end %>
+
+</div>

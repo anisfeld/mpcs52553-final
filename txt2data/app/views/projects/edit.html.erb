@@ -1,0 +1,14 @@
+<% project = Project.find_by(id: params["id"]) %>
+
+<h1>Editing <%= project.title %></h1>
+ 
+ <%= form_tag "/projects/#{project.id}", method: "patch" do %>
+
+      <p>Title: <input value="<%= project.title %>" name="title" type="text" autofocus class="form-control"></p>
+      <p>Description: <input value="<%= project.description %>" name="description" type="textarea" class="form-control"></p>
+      <p>Logo: <input value="<%= project.logo_url %>" name="logo_url" type="text" class="form-control"></p>
+
+      <!-- Need sessions before this will work-->
+      <button class="btn btn-primary">Save Project</button>
+      <!--<button class="btn btn-primary">Save and add data</button> -->
+<% end %>
