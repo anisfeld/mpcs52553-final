@@ -23,7 +23,7 @@
     <% Project.all.where(user_id: session[:user_id]).order('created_at desc').each do |project| %>
 
       <div class="col-sm-3 my-3 text-center">
-        <% logo_url = (project.logo_url.present? ? project.logo_url : 'blank_poster.png') %>
+        <% logo_url = (project.logo_url.present? ? project.logo_url : 'graphics/simon.png') %>
         <%= link_to image_tag(logo_url, :class => "img-fluid"), "/projects/#{project.id}" %>
         <p>
           <%= project.title %>
@@ -45,7 +45,7 @@
   <% Project.all.order('created_at desc').each do |project| %>
 
     <div class="col-sm-3 my-3 text-center">
-      <% logo_url = (project.logo_url.present? ? project.logo_url : 'blank_poster.png') %>
+      <% logo_url = (project.logo_url.present? ? project.logo_url : 'graphics/simon.png') %>
       <%= link_to image_tag(logo_url, :class => "img-fluid"), "/projects/#{project.id}" %>
       <p>
         <%= project.title %>
