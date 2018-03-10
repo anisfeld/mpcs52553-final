@@ -1,12 +1,14 @@
 <% this_id = @project.id %>
 
 <% if @project.data_id.present? %>
+	
 	<% data_id = @project.data_id %>
 	
 	<% if data_id > 0 %>
-	<div class="my-3">
-		<%= link_to "Analyze a text", "/projects/#{this_id}/data/#{data_id}/edit", class: 'btn btn-primary' %>
-	</div>
+	
+		<div class="my-3">
+			<%= link_to "Analyze a text", "/projects/#{this_id}/data/#{data_id}/edit", class: 'btn btn-primary' %>
+		</div>
 
 	<%= render "table", this_id: this_id %>
 	

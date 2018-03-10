@@ -1,7 +1,6 @@
 class ProjectsController < ApplicationController
 
   def show
-    console
     @project = Project.find_by(id: params["id"])
   end
 
@@ -35,7 +34,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    console
+
     @project = Project.new
     @project.title = params["title"]
     @project.description = params["description"]
