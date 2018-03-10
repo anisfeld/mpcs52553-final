@@ -15,6 +15,7 @@ class Datum < ApplicationRecord
 
 	if file.class == ActionDispatch::Http::UploadedFile
 		file_path = file.path
+		
 	else
 		# allows for easier seeding
 		file_path = file

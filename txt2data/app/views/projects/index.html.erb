@@ -7,6 +7,13 @@
               <%= link_to "Log in", "/sessions/new" %> to start a project
             <% end %>
    or contribute to one below </h1>
+
+   <p> Before you can create a project you must create a Txt2Data account (sign up). </p>
+
+<p> Next navigate to the projects page. If you are logged in you will be greated with a link allowing you to start a project. A project keeps high-level information about your endeavor, including a name, a description and a logo. </p>
+
+<p> Next you can add data for analysis. Text data should be stored in a two column csv with the names id and text. </p>
+
   </div>
 </div>
 <% if session[:user_id] != nil && Project.find_by(user_id: session[:user_id]) != nil %>

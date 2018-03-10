@@ -52,19 +52,38 @@ class DataController < ApplicationController
 
   def import
     begin
-      Datum.import(params[:file], params[:project_id])
-      
-      puts "Data in"
-
-      # Connect data to project so we know how to find the next text for analysis
-      project = Project.find_by(id: params[:project_id])
-
-      project.data_id = Datum.where(project_id: params[:project_id]).first.id
-      project.save
-
-      redirect_to "/projects/#{params[:project_id]}/", notice: "Data imported."
+      puts params[:file]
+      notice = "Data imported."
+      Datum.import(params[:file], params[:id])
     rescue
-      redirect_to "/projects/#{params[:project_id]}/", notice: "Invalid CSV file format."
-    end
+      notice = ""
+    end 
+    
+      # Connect data to project so we know how to find the next text for analysis
+      project = Project.find_by(id: params[:id])
+
+     if Datum.where(project_id: params[:id]).present?
+      	project.data_id = Datum.where(project_id: params[:id]).first.id
+      	project.save
+     else
+     	notice = "Could not update project"
+     end
+    
+  	 redirect_to "/projects/#{params[:id]}/", notice: notice
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
