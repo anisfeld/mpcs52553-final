@@ -32,7 +32,7 @@ class DataController < ApplicationController
 	  if next_data.present?
 		  project.data_id = next_data.id
 		  project.save
-	      redirect_to "/projects/#{params[:project_id]}/data/#{next_data}/edit", notice: "Your project has been updated!"
+	      redirect_to "/projects/#{params[:project_id]}/data/#{next_data.id}/edit", notice: "Your project has been updated!"
       else
       	project.data_id = -1
 		project.save
