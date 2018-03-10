@@ -4,7 +4,7 @@ Project
   logo_url: text
   user_id: integer
   is_public: boolean
-  data_id: bigint
+  data_id: integer
 
 
 User
@@ -18,7 +18,7 @@ User
 Datum
   project_id: integer
   complete: boolean
-  pid: bigint
+  pid: integer
   data: text 
   field_1: text
   field_2: text
@@ -26,7 +26,7 @@ Datum
   field_4: text
   field_5: text
 
-#  
+# FUTUREu 
 Form
   field_1: text
   field_1_type: text
@@ -41,9 +41,11 @@ Form
   field_6: text
   field_6_type: text
 
+
+#Legacy code: deprecated
 Txt
   tid: integer
-  bgtjobid: bigint
+  bgtjobid: integer
   jobid: text
   jobtext: text
 

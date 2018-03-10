@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 0) do
 
   create_table "data", force: :cascade do |t|
-    t.bigint "pid"
+    t.integer "pid", limit: 8
     t.text "data"
     t.text "field_1"
     t.text "field_2"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "projects", force: :cascade do |t|
     t.text "title"
     t.text "description"
-    t.bigint "data_id"
+    t.integer "data_id", limit: 8
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text "logo_url"
