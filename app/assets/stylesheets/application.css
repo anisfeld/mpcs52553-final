@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+.logins_box  {
+	margin: 50px;
+	background: grey;
+
+} 
+
+.cooldown {
+        background-color: floralwhite;
+      }
+.hi {
+	color:red;
+}
+
+
+.text {
+	background-color: white;	
+	width: 100%;
+	margin: 40px 20px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+    height: 600px;
+}
+
+.tall_area {
+	height: 5em;
+}

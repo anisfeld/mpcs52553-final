@@ -1,0 +1,48 @@
+<% @data = Datum.find_by(id: params[:id]) %>
+
+<div class="row">
+  <div class="col-sm-4">
+			<div class="page-header">
+				<h1> Capture data </h1>
+			</div>	
+
+
+		<%= form_for @data, url: "/projects/#{params[:project_id]}/data/#{params[:id]}", html: {method: "patch"}  do |f|%>		
+			<p>
+		     	<b>What words are fun?</b>
+		    	<b>Evidence: </b>
+		    		<%= f.text_area :field_1, class: "form-control"  %>
+		    </p>
+
+		    <p>
+		     	<b>What words are  sad?</b>
+		    	<b>Evidence: </b>
+		    		<%= f.text_area :field_2, class: "form-control"  %>
+		    </p>
+
+		    <p>
+		     	<b>What words are hope?</b>
+		    	<b>Evidence: </b>
+		    		<%= f.text_area :field_3, class: "form-control"  %>
+		    </p>
+
+		    <p>
+		     	<b>What words are gloom?</b>
+		    	<b>Evidence: </b>
+		    		<%= f.text_area :field_4, class: "form-control"  %>
+		    </p>
+		<%= submit_tag("Next") %> <!--<button >Skip</button>-->
+		<% end %>
+  </div>
+  
+  	
+  	<div class="col-sm-8 scroll">
+		<div class='text flow'> <!-- OWN DESIGNATION -->
+			<strong> Text: </strong><br>
+			<% if @data.present? %>
+				<%= @data["data"] %>
+			<% else %>
+				The text id is not present.
+			<% end %>
+		</div>
+	</div>

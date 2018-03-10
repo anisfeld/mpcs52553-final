@@ -1,3 +1,46 @@
+Project
+  title: text
+  description: text
+  logo_url: text
+  user_id: integer
+  is_public: boolean
+  data_id: bigint
+
+
+User
+  email: text
+  password_digest: text
+  first_name: text
+  last_name: text
+
+
+
+Datum
+  project_id: integer
+  complete: boolean
+  pid: bigint
+  data: text 
+  field_1: text
+  field_2: text
+  field_3: text
+  field_4: text
+  field_5: text
+
+#  
+Form
+  field_1: text
+  field_1_type: text
+  field_2: text
+  field_2_type: text
+  field_3: text
+  field_3_type: text
+  field_4: text
+  field_4_type: text
+  field_5: text
+  field_5_type: text
+  field_6: text
+  field_6_type: text
+
 Txt
   tid: integer
   bgtjobid: bigint

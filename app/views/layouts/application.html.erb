@@ -13,17 +13,21 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
-    <style type="text/css">
-    	.cooldown {
-    		background-color: floralwhite;
-    	}
-    </style>
-
   </head>
 
-  <body class="cooldown">
-  	<div class="container">
-    	<%= yield %>
-	</div>
+  <body>
+
+   
+    <%= render "layouts/navbar" %>
+
+    <div class="container">
+
+      <%= render "layouts/warnings" %>
+      <%= yield %>
+      
+    </div>
   </body>
+
 </html>
+
+
