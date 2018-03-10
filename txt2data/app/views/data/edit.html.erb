@@ -7,7 +7,7 @@
 			</div>	
 
 
-		<%= form_for @data, url: "/projects/#{params[:project_id]}/data/#{params[:id]}", html: {method: "patch"}  do |f|%>		
+		<%= form_for @data, url: "/projects/#{params["project_id"]}/data/#{params["id"]}", html: {method: "patch"}  do |f|%>		
 			<p>
 		     	<b>What words are fun?</b>
 		    	<b>Evidence: </b>
