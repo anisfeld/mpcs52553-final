@@ -13,7 +13,7 @@
     <tbody>
       <% Datum.all.where(project_id: @project.id).each do |data| %>
         <tr>
-          <td><%= link_to data.id, "/projects/#{@project.id}/data/#{data.id}/edit" %></td>
+          <td><%= link_to data.id, "/projects/#{this_id}/data/#{data.id}/edit" %></td>
   
 
           <td><%=  data.field_1  %></td>
@@ -22,7 +22,7 @@
           <td><%=  data.field_4  %></td>
 
           <td>
-          <%= link_to "[Delete]", "/projects/#{@project.id}/data/#{data.id}", method: 'delete' %></td>
+          <%= link_to "[Delete]", "/projects/#{this_id}/data/#{data.id}", method: 'delete' %></td>
         </tr>
       <% end %>
     </tbody>
