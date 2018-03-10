@@ -1,10 +1,9 @@
 class Project < ApplicationRecord
 
 	validates :title, presence: true
+	#validates :image, format: 
 	
-	has_one :datum
-	has_one :form
-	has_many :tests
+	has_many :datum
 	
 	belongs_to :user
 

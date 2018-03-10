@@ -1,5 +1,5 @@
-class Test < ApplicationRecord
+# class Test < ApplicationRecord
 
-	belongs_to :project
+# 	belongs_to :project
 	
-end
+# end

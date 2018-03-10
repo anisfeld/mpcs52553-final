@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(version: 0) do
     t.text "field_5"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer "project_id"
+    t.boolean "complete", default: false
+    t.index ["project_id"], name: "index_data_on_project_id"
   end
 
   create_table "descriptions", force: :cascade do |t|
@@ -58,23 +61,14 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "projects", force: :cascade do |t|
     t.text "title"
     t.text "description"
-    t.integer "data_id", limit: 8
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text "owner_id"
-    t.text "logo_url"
-    t.boolean "is_public", default: false
-    t.index ["data_id"], name: "index_projects_on_data_id"
-    t.index ["owner_id"], name: "index_projects_on_owner_id"
-  end
-
-  create_table "tests", force: :cascade do |t|
-    t.integer "project_id"
     t.bigint "data_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["data_id"], name: "index_tests_on_data_id"
-    t.index ["project_id"], name: "index_tests_on_project_id"
+    t.text "logo_url"
+    t.boolean "is_public", default: false
+    t.integer "user_id"
+    t.index ["data_id"], name: "index_projects_on_data_id"
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "txts", force: :cascade do |t|
@@ -88,11 +82,11 @@ ActiveRecord::Schema.define(version: 0) do
 
   create_table "users", force: :cascade do |t|
     t.text "email"
-    t.text "password"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text "first_name"
     t.text "last_name"
+    t.text "password_digest"
   end
 
 end

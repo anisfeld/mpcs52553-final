@@ -1,5 +1,5 @@
-class Form < ApplicationRecord
+# class Form < ApplicationRecord
 
-	belongs_to :project
+# 	belongs_to :project
 
-end
+# end
