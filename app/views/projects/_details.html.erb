@@ -1,10 +1,11 @@
-<%  this_user_id = @project.user_id %>
-
 
 <div class="row">
   <div class="col-sm-4">
   	<h1><%= @project.title %> </h1>
-      <p class="lead">  A <%= link_to @project.user.first_name + " " + @project.user.last_name, "/users/#{this_user_id}" %> Project </p>
+      <p class="lead">  
+      		A 
+     		<%= link_to @project.user.first_name + " " + @project.user.last_name, "/users/#{@project.user_id}" %> Project 
+      </p>
       <% logo_url = (@project.logo_url.present? ? @project.logo_url : 'graphics/simon.png') %>
    	  <%= image_tag(logo_url, :class => "img-fluid") %>
   </div>
