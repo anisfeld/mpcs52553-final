@@ -16,7 +16,7 @@
 
       <p>Title: <input value="<%= @project.title %>", name="title" type="text" autofocus class="form-control"></p>
       <p>Description: <input value="<%= @project.description %>", name="description" type="textarea" class="form-control"></p>
-      <p>Logo: <input value="<%= @project.logo_url %>" name="logo_url" type="text" class="form-control" placeholder="Add the url to a picture"></p>
+      <!--<p>Logo: <input value="<%= @project.logo_url %>" name="logo_url" type="text" class="form-control" placeholder="Add the url to a picture"></p>-->
       <%= label_tag "Is the project open to the public?" %>
       <%= check_box_tag "is_public", true, checked: true %>
 

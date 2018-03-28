@@ -6,26 +6,25 @@ Project
   is_public: boolean
   data_id: integer
 
-
 User
   email: text
   password_digest: text
   first_name: text
   last_name: text
 
-
-
 Datum
   project_id: integer
   complete: boolean
   pid: integer
   data: text 
-  field_1: text
-  field_2: text
-  field_3: text
-  field_4: text
+  field_1: text #flex_good
+  field_2: text #flex_bad
+  field_3: text #work_from_home
+  field_4: text #benefits_string
   field_5: text
-
+  field_1_on: integer
+  field_2_on: integer 
+  field_3_on: integer
 # FUTUREu 
 Form
   field_1: text

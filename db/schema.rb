@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 0) do
     t.datetime "updated_at"
     t.integer "project_id"
     t.boolean "complete", default: false
+    t.integer "field_1_on"
+    t.integer "field_2_on"
+    t.integer "field_3_on"
     t.index ["project_id"], name: "index_data_on_project_id"
   end
 
