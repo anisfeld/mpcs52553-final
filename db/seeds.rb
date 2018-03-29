@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# Datum.delete_all
+Datum.delete_all
 User.delete_all
-# Project.delete_all
+Project.delete_all
 
 User.create email: 'bob@example.org', password: 'Hope4All', first_name: "Bob", last_name: "Hope"
 User.create email: 'barry@example.org', password: 'Hope4Change', first_name: "Barack", last_name: "Obama"
