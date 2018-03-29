@@ -10,8 +10,8 @@ Use cases include:
 # Installation
 To run the beta version, clone this repository where you'd like the files to live on your computer
 ```
-git clone https://github.com/anisfeld/mpcs52553-final.git
-cd mpcs52553-final/txt2data
+git clone https://github.com/anisfeld/txt2data.git
+cd txt2data/txt2data
 bundle install
 rails db:migrate
 rails db:seed
